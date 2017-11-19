@@ -11,7 +11,7 @@ rm -r /home/pi/.pm2/logs/mm-out-0.log --> delete file
 
 
 shutdown:
-go on mobile page:192.168.0.6:8080/remote.html
+go on mobile page: PERSONALIP:8080/remote.html
 
 for no logs start mirror with: 
 pm2 start mm -o "/dev/null" -e "/dev/null"
