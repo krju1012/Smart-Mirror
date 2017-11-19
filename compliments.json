@@ -1,0 +1,38 @@
+{
+	"morning" : [
+		"Morgenstund´ hat Gold im Mund.",
+		"Ein Kaffee am Morgen vertreibt Kummer und Sorgen.",
+		"Noch nicht ganz ausgeschlafen?",
+		"Wow, lange Nacht gehabt?",
+		"Moin Moin."
+	],
+	"afternoon" : [
+		"Mittagspause?",
+		"Schon ein Mittagsschläfchen gemacht?",
+		"(K)ein Bier vor 4."
+	],
+	"evening" : [
+		"Guten Abend.",
+		"Abendstund´ hat Gold im Mund.",
+		"Eigentlich hatte ich heute viel vor. Jetzt habe ich morgen viel vor."
+	],
+	"anytime" : [
+		"Sahneschnitte",
+		"Schokotörtchen",
+		"Dieses Outfit? Wirklich?",
+		"Home is where your Bauch doesn´t have to be eingezogen!"
+	],
+	"day_sunny" : [
+		"Sonnige Grüße.   - Erde"
+	],
+	"showers" : [
+		"Regenschirm nicht vergessen!"
+	],
+	"rain" : [
+		"Regenschirm nicht vergessen!"
+	],
+	"snow" : [
+	    "Zeit für ne Schneeballschlacht?",
+		"Kalt, ne?"
+	]
+}

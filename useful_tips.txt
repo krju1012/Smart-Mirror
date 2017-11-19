@@ -1,0 +1,17 @@
+if MagicMirror stops working suddenly:
+--> check disk usage (command: "ncdu" in main folder): cd MagicMirror 
+ls -l
+look for core file (log-file), it sometimes gets huge and trashes the sd-card, 
+	no space left then
+rm core 
+
+or:
+
+rm -r /home/pi/.pm2/logs/mm-out-0.log --> delete file
+
+
+shutdown:
+go on mobile page:192.168.0.6:8080/remote.html
+
+for no logs start mirror with: 
+pm2 start mm -o "/dev/null" -e "/dev/null"

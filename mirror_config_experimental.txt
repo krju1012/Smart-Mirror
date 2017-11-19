@@ -1,0 +1,109 @@
+
+/* Magic Mirror Config Sample
+ *
+ * By Michael Teeuw http://michaelteeuw.nl
+ * MIT Licensed.
+ */
+
+var config = {
+        port: 8080,
+        ipWhitelist: ["127.0.0.1","::ffff:127.0.0.1", "::1","192.168.0.3","192.168.1.1/112","192.168.2.1/112"],
+
+        language: 'de',
+        timeFormat: 24,
+        units: 'metric',
+
+        modules: [
+                {
+                        module: 'alert',
+                },
+                {
+                        module: 'MMM-PIR-Sensor',
+                        config: {
+                                sensorPIN: 21,
+                                powerSaving: true,
+                        }
+                },
+				{
+					module: 'MMM-Remote-Control'
+					// uncomment the following line to show the URL of the remote control on the mirror
+					// , position: 'bottom_left'
+					// you can hide this module afterwards from the remote control itself
+				},
+
+                {
+                        module: 'clock',
+                        position: 'top_left',
+
+                },
+     	 	    {
+					module: 'DailyXKCD',
+					position: 'top_left',
+					config: {
+						invertColors: true,
+						title: true,
+						altText: false,
+						randomComic: true
+					}
+				},
+              	{
+					module: 'MMM-forecast-io',
+					classes: 'small',
+					position: 'top_right',  // This can be any of the regions.
+					config: {
+							// See 'Configuration options' for more information.
+						apiKey: 'a14ba773ce5a2d85ec14c6bf1498e698', // Dark Sky API key.
+							// Only required if geolocation doesn't work:
+						latitude:   49.007489, 
+						longitude: 8.420307,
+					}
+				},     
+                {
+                    module: 'MMM-PublicTransportDB',
+                    position: 'top_left',
+                    config: {
+						name: "Karlsruhe Durlacher Tor",
+                        stationId: 8079125,
+                        delay: 8,
+						excludedTransportationTypes: 'bus',
+						departureMinutes: 300,
+						maxUnreachableDepartures: 3,
+						maxReachableDepartures: 10,
+						showTableHeaderAsSymbols: true
+                        }
+                },
+                {
+                        module: 'newsfeed',
+                        position: 'bottom_bar',
+                        config: {
+                                feeds: [
+									{
+										title: "Badisches Tagblatt",
+										url: "http://www.badisches-tagblatt.de/buehl/rdf.xml"
+									},
+									{
+										title: "Badisches Tagblatt: Sport",
+										url: "http://www.badisches-tagblatt.de/sport/rdf.xml"
+									},
+									{
+										title: "Ka-News",
+										url: "http://www.ka-news.de/storage/rss/rss/karlsruhe.xml"
+									},
+									{
+										title: "Ka-News: KSC",
+										url: "http://www.ka-news.de/storage/rss/rss/ksc.xml"
+									}
+                                ],
+						showSourceTitle: true,
+						showPublishDate: true,
+						showDescription: true
+                        }
+                },
+        ]
+
+};
+
+/*************** DO NOT EDIT THE LINE BELOW ***************/
+if (typeof module !== 'undefined') {module.exports = config;}
+
+
