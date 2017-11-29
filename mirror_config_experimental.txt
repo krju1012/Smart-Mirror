@@ -38,7 +38,7 @@ var config = {
                 },
      	 	    {
 					module: 'DailyXKCD',
-					position: 'top_left',
+					position: 'lower_third',
 					config: {
 						invertColors: true,
 						title: true,
